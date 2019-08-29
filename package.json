@@ -5,6 +5,7 @@
   "main": "build/cjs.js",
   "module": "build/esm.js",
   "scripts": {
+    "test": "jest",
     "build": "npm run build:clean && npm run build:all",
     "build:clean": "rimraf build",
     "build:all": "rollup -c",
@@ -40,26 +41,35 @@
     "@storybook/addons": "^5.1.11",
     "@storybook/cli": "^5.1.11",
     "@storybook/react": "^5.1.11",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.18",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.2.2",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "gh-pages": "^2.1.1",
+    "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "pre-commit": "^1.2.2",
     "react": "^16.9.0",
     "react-docgen-typescript-loader": "^3.1.1",
     "rimraf": "^3.0.0",
     "rollup": "^1.20.3",
+    "rollup-plugin-alias": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "storybook": "^1.0.0",
@@ -77,9 +87,33 @@
     "> 1% in US"
   ],
   "pre-commit": [
+    "test",
     "lint-staged"
   ],
   "lint-staged": {
     "src/**/*.{ts,tsx}": "eslint"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "mjs",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "moduleNameMapper": {
+      "^Utils(.*)$": "<rootDir>/src/utils$1",
+      "^Components(.*)$": "<rootDir>/src/components$1",
+      "^Styles(.*)$": "<rootDir>/src/styles$1"
+    },
+    "transform": {
+      ".jsx?$": "babel-jest",
+      ".tsx?$": "babel-jest"
+    }
   }
 }

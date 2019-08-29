@@ -2,13 +2,16 @@ const path = require('path')
 
 const resolve = require('rollup-plugin-node-resolve')
 const babel = require('rollup-plugin-babel')
+const alias = require('rollup-plugin-alias')
 
 const rootDirectory = path.resolve(__dirname)
 const srcDirectory = path.resolve(rootDirectory, 'src')
 const buildDirectory = path.resolve(rootDirectory, 'build')
 
+const extensions = ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.json']
+
 module.exports = {
-  input: path.resolve(srcDirectory, 'index.tsx'),
+  input: path.resolve(srcDirectory, 'index.ts'),
   output: [
     {
       file: path.resolve(buildDirectory, 'cjs.js'),
@@ -27,9 +30,28 @@ module.exports = {
     'styled-components',
   ],
   plugins: [
-    resolve(),
+    alias({
+      resolve: extensions,
+      entries: [
+        {
+          find:'Components',
+          replacement: path.resolve(srcDirectory, 'components'),
+        },
+        {
+          find: 'Utils',
+          replacement: path.resolve(srcDirectory, 'utils'),
+        },
+        {
+          find: 'Styles',
+          replacement: path.resolve(srcDirectory, 'styles'),
+        },
+      ],
+    }),
+    resolve({
+      extensions,
+    }),
     babel({
-      extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.json'],
+      extensions,
       exclude: 'node_modules/**',
     }),
   ],

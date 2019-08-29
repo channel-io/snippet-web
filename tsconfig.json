@@ -8,6 +8,7 @@
     "paths": {
       "Storybook/*": ["storybook/*"],
       "Styles/*": ["src/styles/*"],
+      "Utils/*": ["src/utils/*"],
     }
   }
 }

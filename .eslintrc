@@ -21,6 +21,8 @@
     ],
     "semi": ["error", "never"],
     "no-console": "error",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
     "react/prop-types": 0,
     "react/jsx-curly-spacing": ["error", {
       "when": "never",
@@ -28,6 +30,24 @@
     }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "@typescript-eslint/member-delimiter-style": [1, {
+      "multiline": {
+        "delimiter": "comma",
+        "requireLast": true
+      },
+      "singleline": {
+        "delimiter": "comma",
+        "requireLast": false
+      }
+    }]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {},
+    },
   }
 }
