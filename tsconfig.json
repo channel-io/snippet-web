@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "noEmit": true,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "Storybook/*": ["storybook/*"],
+      "Styles/*": ["src/styles/*"],
+    }
+  }
+}
