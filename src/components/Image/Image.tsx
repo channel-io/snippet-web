@@ -16,9 +16,11 @@ function Image({ url }: ImageProps): ReactElement | null {
   }
 
   return (
-    <Styled.Image
-      src={url}
-    />
+    <Styled.Wrapper>
+      <Styled.Image
+        src={url}
+      />
+    </Styled.Wrapper>
   )
 }
 
