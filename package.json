@@ -13,7 +13,9 @@
     "build:storybook": "rimraf storybook-static && build-storybook",
     "deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static",
     "lint:typescript": "eslint 'src/**/*.{ts,tsx}'",
-    "lint-staged": "lint-staged"
+    "lint:styled": "stylelint src/**/*.styled.ts",
+    "lint:all": "npm run lint:typescript && npm run lint:styled",
+    "lint:staged": "lint-staged"
   },
   "author": "ZOYI",
   "license": "MIT",
@@ -74,6 +76,10 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "storybook": "^1.0.0",
     "styled-components": "^4.3.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
@@ -88,10 +94,11 @@
   ],
   "pre-commit": [
     "test",
-    "lint-staged"
+    "lint:staged"
   ],
   "lint-staged": {
-    "src/**/*.{ts,tsx}": "eslint"
+    "src/**/*.{ts,tsx}": "eslint",
+    "src/**/*.styled.ts": "stylelint"
   },
   "jest": {
     "verbose": true,
