@@ -23,7 +23,7 @@
     "no-console": "error",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
-    "react/prop-types": 0,
+    "react/prop-types": "off",
     "react/jsx-curly-spacing": ["error", {
       "when": "never",
       "children": { "when": "always" },
@@ -31,6 +31,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/member-delimiter-style": [1, {
       "multiline": {
         "delimiter": "comma",

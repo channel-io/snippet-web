@@ -7,6 +7,9 @@
     "baseUrl": "./",
     "paths": {
       "Storybook/*": ["storybook/*"],
+      "Components/*": ["src/components/*"],
+      "Constants/*": ["src/constants/*"],
+      "Containers/*": ["src/containers/*"],
       "Styles/*": ["src/styles/*"],
       "Utils/*": ["src/utils/*"],
     }

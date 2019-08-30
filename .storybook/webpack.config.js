@@ -18,7 +18,10 @@ module.exports = ({ config }) => {
     ...config.resolve.alias,
     Storybook: path.resolve(rootDirectory, 'storybook'),
     Styles: path.resolve(srcDirectory, 'styles'),
+    Containers: path.resolve(srcDirectory, 'containers'),
+    Constants: path.resolve(srcDirectory, 'constants'),
     Components: path.resolve(srcDirectory, 'components'),
+    Utils: path.resolve(srcDirectory, 'utils'),
   }
   return config
 }

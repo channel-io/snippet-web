@@ -38,6 +38,14 @@ module.exports = {
           replacement: path.resolve(srcDirectory, 'components'),
         },
         {
+          find: 'Constants',
+          replacement: path.resolve(srcDirectory, 'constants'),
+        },
+        {
+          find:'Containers',
+          replacement: path.resolve(srcDirectory, 'containers'),
+        },
+        {
           find: 'Utils',
           replacement: path.resolve(srcDirectory, 'utils'),
         },
