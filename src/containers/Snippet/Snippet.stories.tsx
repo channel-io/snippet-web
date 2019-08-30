@@ -17,6 +17,10 @@ storiesOf('Snippet', module)
         url: 'https://http.cat/200',
       },
       {
+        id: 'divider-1',
+        type: 'divider',
+      },
+      {
         id: 'key-value',
         type: 'key-value',
         items: [
@@ -35,6 +39,11 @@ storiesOf('Snippet', module)
         ],
       },
       {
+        id: 'divider-2',
+        type: 'divider',
+      },
+      {
+        id: 'image-cat',
         type: 'image',
         url: 'https://http.cat/418',
       },
