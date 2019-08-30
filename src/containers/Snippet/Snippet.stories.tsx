@@ -12,12 +12,27 @@ storiesOf('Snippet', module)
   .add('Basic', () => {
     const items = object('items', [
       {
+        id: 'image',
         type: 'image',
         url: 'https://http.cat/200',
       },
       {
-        type: 'image',
-        url: 'https://http.cat/404',
+        id: 'key-value',
+        type: 'key-value',
+        items: [
+          {
+            key: 'Plugin',
+            value: 'channel.io',
+          },
+          {
+            key: 'Trigger',
+            value: 'PushBot',
+          },
+          {
+            key: 'Category',
+            value: 'Enhancements',
+          },
+        ],
       },
       {
         type: 'image',

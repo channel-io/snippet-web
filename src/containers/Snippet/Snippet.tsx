@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
 import Image from 'Components/Image'
+import KeyValue from 'Components/KeyValue'
 import ComponentType from 'Constants/ComponentType'
 import isObject from 'Utils/isObject'
 import isString from 'Utils/isString'
@@ -20,6 +21,8 @@ function getComponent(type?: string) {
   switch (type) {
     case ComponentType.Image:
       return Image
+    case ComponentType.KeyValue:
+      return KeyValue
     default:
       return null
   }
