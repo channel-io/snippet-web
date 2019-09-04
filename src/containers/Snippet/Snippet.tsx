@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
 import Divider from 'Components/Divider'
+import Input from 'Components/Input'
 import Image from 'Components/Image'
 import KeyValue from 'Components/KeyValue'
 import List from 'Components/List'
@@ -35,6 +36,8 @@ function getComponent(type?: string) {
       return ListItem
     case ComponentType.Spacer:
       return Spacer
+    case ComponentType.Input:
+      return Input
     default:
       return null
   }

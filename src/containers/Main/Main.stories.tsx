@@ -5,9 +5,9 @@ import { withKnobs, object } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
 import SnippetPreview from 'Storybook/SnippetPreview'
-import Snippet from './Snippet'
+import Main from './Main'
 
-storiesOf('Snippet', module)
+storiesOf('Main', module)
   .addDecorator(withKnobs)
   .add('Basic', () => {
     const items = object('items', [
@@ -62,11 +62,18 @@ storiesOf('Snippet', module)
           },
         ],
       },
+      {
+        id: 'input',
+        type: 'input',
+        label: 'name',
+        value: 'channel.io',
+        placeholder: 'Please enter your name',
+      },
     ])
 
     return (
       <SnippetPreview>
-        <Snippet items={items} />
+        <Main items={items} />
       </SnippetPreview>
     )
   })
