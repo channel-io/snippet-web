@@ -1,5 +1,5 @@
 {
-  "name": "@zoyi/channel-snippet",
+  "name": "@channel.io/snippet",
   "version": "0.1.0",
   "description": "channel.io snippet components",
   "main": "build/cjs.js",

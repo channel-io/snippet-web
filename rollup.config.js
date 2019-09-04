@@ -34,16 +34,16 @@ module.exports = {
       resolve: extensions,
       entries: [
         {
-          find: 'Components',
-          replacement: path.resolve(srcDirectory, 'components'),
+          find: /^Components(.*)$/,
+          replacement: `${path.resolve(srcDirectory, 'components')}$1/index`,
         },
         {
           find: 'Constants',
           replacement: path.resolve(srcDirectory, 'constants'),
         },
         {
-          find: 'Containers',
-          replacement: path.resolve(srcDirectory, 'containers'),
+          find: /^Containers(.*)$/,
+          replacement: `${path.resolve(srcDirectory, 'containers')}$1/index`,
         },
         {
           find: 'Contexts',
