@@ -40,11 +40,17 @@ function Input({
     submitting,
   } = useContext(FormContext)
 
-  useEffect(() => () => {
-    if (isString(id)) {
-      removeInput(id)
+  useEffect(() => {
+    if (isString(id) && (isString(value) || isNumber(value))) {
+      updateInput(id, value)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    return () => {
+      if (isString(id)) {
+        removeInput(id)
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const [hasError, setHasError] = useState(false)
