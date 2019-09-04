@@ -7,6 +7,7 @@ import Image from 'Components/Image'
 import KeyValue from 'Components/KeyValue'
 import List from 'Components/List'
 import ListItem from 'Components/ListItem'
+import Spacer from 'Components/Spacer'
 import ComponentType from 'Constants/ComponentType'
 import isObject from 'Utils/isObject'
 import isString from 'Utils/isString'
@@ -32,6 +33,8 @@ function getComponent(type?: string) {
       return List
     case ComponentType.ListItem:
       return ListItem
+    case ComponentType.Spacer:
+      return Spacer
     default:
       return null
   }
