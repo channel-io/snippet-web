@@ -21,6 +21,7 @@ module.exports = ({ config }) => {
     Containers: path.resolve(srcDirectory, 'containers'),
     Constants: path.resolve(srcDirectory, 'constants'),
     Components: path.resolve(srcDirectory, 'components'),
+    Contexts: path.resolve(srcDirectory, 'contexts'),
     Utils: path.resolve(srcDirectory, 'utils'),
   }
   return config

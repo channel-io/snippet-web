@@ -34,7 +34,7 @@ module.exports = {
       resolve: extensions,
       entries: [
         {
-          find:'Components',
+          find: 'Components',
           replacement: path.resolve(srcDirectory, 'components'),
         },
         {
@@ -42,8 +42,12 @@ module.exports = {
           replacement: path.resolve(srcDirectory, 'constants'),
         },
         {
-          find:'Containers',
+          find: 'Containers',
           replacement: path.resolve(srcDirectory, 'containers'),
+        },
+        {
+          find: 'Contexts',
+          replacement: path.resolve(srcDirectory, 'contexts'),
         },
         {
           find: 'Utils',
