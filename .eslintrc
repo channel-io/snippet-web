@@ -32,6 +32,7 @@
     "react-hooks/exhaustive-deps": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/jsx-props-no-spreading": "off",
+    "react/style-prop-object": "off",
     "@typescript-eslint/member-delimiter-style": [1, {
       "multiline": {
         "delimiter": "comma",

@@ -33,7 +33,12 @@ function Input({
   disabled,
   error,
 }: InputProps): ReactElement | null {
-  const { removeInput, updateInput, values } = useContext(FormContext)
+  const {
+    removeInput,
+    updateInput,
+    values,
+    submitting,
+  } = useContext(FormContext)
 
   useEffect(() => () => {
     if (isString(id)) {
@@ -80,7 +85,7 @@ function Input({
         onChange={handleOnChange}
         value={inputValue}
         placeholder={placeholder}
-        disabled={isBoolean(disabled) ? disabled : false}
+        disabled={submitting || (isBoolean(disabled) ? disabled : false)}
         hasError={hasError}
       />
       { hasError && (<Styled.Error>{ error }</Styled.Error>) }

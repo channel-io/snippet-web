@@ -2,6 +2,7 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
+import Button from 'Components/Button'
 import Divider from 'Components/Divider'
 import Input from 'Components/Input'
 import Image from 'Components/Image'
@@ -24,6 +25,8 @@ interface Item {
 
 function getComponent(type?: string) {
   switch (type) {
+    case ComponentType.Button:
+      return Button
     case ComponentType.Divider:
       return Divider
     case ComponentType.Image:

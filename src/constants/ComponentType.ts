@@ -1,4 +1,5 @@
 enum ComponentType {
+  Button = 'button',
   Divider = 'divider',
   Image = 'image',
   Input = 'input',
