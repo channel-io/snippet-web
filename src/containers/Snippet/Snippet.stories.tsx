@@ -43,9 +43,24 @@ storiesOf('Snippet', module)
         type: 'divider',
       },
       {
-        id: 'image-cat',
-        type: 'image',
-        url: 'https://http.cat/418',
+        id: 'list',
+        type: 'list',
+        items: [
+          {
+            id: 'list-item-1',
+            title: 'Channel.io',
+            description: 'Live Chat and Team Communication',
+            image: 'https://http.cat/200',
+            url: 'https://channel.io',
+          },
+          {
+            id: 'list-item-2',
+            title: 'Walkinsights',
+            description: 'Offline Customer Analytics',
+            image: 'https://http.cat/418',
+            url: 'https://walkinsights.com',
+          },
+        ],
       },
     ])
 

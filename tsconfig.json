@@ -4,6 +4,10 @@
     "jsx": "react",
     "noEmit": true,
     "strict": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
     "baseUrl": "./",
     "paths": {
       "Storybook/*": ["storybook/*"],

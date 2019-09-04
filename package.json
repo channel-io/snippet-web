@@ -115,6 +115,8 @@
     ],
     "moduleNameMapper": {
       "^Utils(.*)$": "<rootDir>/src/utils$1",
+      "^Constants(.*)$": "<rootDir>/src/constants$1",
+      "^Containers(.*)$": "<rootDir>/src/containers$1",
       "^Components(.*)$": "<rootDir>/src/components$1",
       "^Styles(.*)$": "<rootDir>/src/styles$1"
     },

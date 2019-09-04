@@ -6,6 +6,7 @@
   ],
   "syntax": "scss",
   "rules": {
-    "color-no-hex": true
+    "color-no-hex": true,
+    "number-leading-zero": "never"
   }
 }

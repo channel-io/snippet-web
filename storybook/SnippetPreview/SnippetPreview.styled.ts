@@ -53,4 +53,5 @@ export const Content = styled.div`
   border-radius: 8px;
   padding-top: 8px;
   box-shadow: inset 0 0 0 1px ${Colors.Grey300};
+  overflow: hidden;
 `
