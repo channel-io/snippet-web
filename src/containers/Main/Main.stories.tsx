@@ -1,7 +1,8 @@
 /* External dependencies */
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, object } from '@storybook/addon-knobs'
+import { withKnobs, object, boolean } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 /* Internal dependencies */
 import SnippetPreview from 'Storybook/SnippetPreview'
@@ -10,7 +11,23 @@ import Main from './Main'
 storiesOf('Main', module)
   .addDecorator(withKnobs)
   .add('Basic', () => {
+    const onSubmit = action('onSubmit')
+    const submitting = boolean('submitting', false)
     const items = object('items', [
+      {
+        id: 'dropdown-top',
+        type: 'dropdown',
+        label: 'Select a fruit',
+        error: 'Please select a fruit',
+        items: [
+          { id: 'apple', label: 'Apple' },
+          { id: 'banana', label: 'Banana' },
+          { id: 'limne', label: 'Limne' },
+          { id: 'mango', label: 'Mango' },
+          { id: 'peach', label: 'Peach' },
+          { id: 'cherry', label: 'Cherry' },
+        ],
+      },
       {
         id: 'image',
         type: 'image',
@@ -69,11 +86,36 @@ storiesOf('Main', module)
         value: 'channel.io',
         placeholder: 'Please enter your name',
       },
+      {
+        id: 'dropdown-bottom',
+        type: 'dropdown',
+        label: 'Select a fruit',
+        items: [
+          { id: 'apple', label: 'Apple' },
+          { id: 'banana', label: 'Banana' },
+          { id: 'limne', label: 'Limne' },
+          { id: 'mango', label: 'Mango' },
+          { id: 'peach', label: 'Peach' },
+          { id: 'cherry', label: 'Cherry' },
+        ],
+      },
+      {
+        id: 'submit-button',
+        type: 'button',
+        label: 'submit',
+        action: {
+          type: 'submit',
+        },
+      },
     ])
 
     return (
       <SnippetPreview>
-        <Main items={items} />
+        <Main
+          items={items}
+          onSubmit={onSubmit}
+          submitting={submitting}
+        />
       </SnippetPreview>
     )
   })

@@ -3,12 +3,13 @@ const path = require('path')
 const resolve = require('rollup-plugin-node-resolve')
 const babel = require('rollup-plugin-babel')
 const alias = require('rollup-plugin-alias')
+const url = require('rollup-plugin-url')
 
 const rootDirectory = path.resolve(__dirname)
 const srcDirectory = path.resolve(rootDirectory, 'src')
 const buildDirectory = path.resolve(rootDirectory, 'build')
 
-const extensions = ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.json']
+const extensions = ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.json', '.svg']
 
 module.exports = {
   input: path.resolve(srcDirectory, 'index.ts'),
@@ -27,6 +28,7 @@ module.exports = {
   ],
   external: [
     'react',
+    'react-dom',
     'styled-components',
   ],
   plugins: [
@@ -50,6 +52,10 @@ module.exports = {
           replacement: path.resolve(srcDirectory, 'contexts'),
         },
         {
+          find: 'Hooks',
+          replacement: path.resolve(srcDirectory, 'hooks'),
+        },
+        {
           find: 'Utils',
           replacement: path.resolve(srcDirectory, 'utils'),
         },
@@ -59,6 +65,7 @@ module.exports = {
         },
       ],
     }),
+    url(),
     resolve({
       extensions,
     }),

@@ -1,5 +1,5 @@
 /* External dependencies */
-import React, { ReactNode } from 'react'
+import React, { ReactNode, forwardRef, Ref } from 'react'
 
 /* Internal dependencies */
 import * as Styled from './SnippetPreview.styled'
@@ -8,12 +8,15 @@ interface SnippetPreviewProps {
   children: ReactNode,
 }
 
-function SnippetPreview({ children }: SnippetPreviewProps) {
+function SnippetPreview(
+  { children }: SnippetPreviewProps,
+  ref?: Ref<HTMLDivElement>,
+) {
   return (
     <>
       <Styled.GlobalStyle />
       <Styled.Wrapper>
-        <Styled.Content>
+        <Styled.Content ref={ref}>
           { children }
         </Styled.Content>
       </Styled.Wrapper>
@@ -21,4 +24,4 @@ function SnippetPreview({ children }: SnippetPreviewProps) {
   )
 }
 
-export default SnippetPreview
+export default forwardRef(SnippetPreview)

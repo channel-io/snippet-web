@@ -2,6 +2,7 @@
 import React from 'react'
 
 /* Internal dependencies */
+import ContainerRefProvider from 'Containers/ContainerRefProvider'
 import FormProvider from 'Containers/FormProvider'
 import Snippet from 'Containers/Snippet'
 
@@ -15,23 +16,29 @@ interface Item {
 }
 
 interface MainProps {
+  className?: string,
   submitting?: boolean,
   onSubmit?: (values: InputValues, componentId: string) => void,
   items: Item[],
 }
 
 function Main({
+  className,
   submitting,
   onSubmit,
   items,
 }: MainProps) {
   return (
-    <FormProvider
-      submitting={submitting}
-      onSubmit={onSubmit}
+    <ContainerRefProvider
+      className={className}
     >
-      <Snippet items={items} />
-    </FormProvider>
+      <FormProvider
+        submitting={submitting}
+        onSubmit={onSubmit}
+      >
+        <Snippet items={items} />
+      </FormProvider>
+    </ContainerRefProvider>
   )
 }
 

@@ -22,6 +22,7 @@ module.exports = ({ config }) => {
     Constants: path.resolve(srcDirectory, 'constants'),
     Components: path.resolve(srcDirectory, 'components'),
     Contexts: path.resolve(srcDirectory, 'contexts'),
+    Hooks: path.resolve(srcDirectory, 'hooks'),
     Utils: path.resolve(srcDirectory, 'utils'),
   }
   return config

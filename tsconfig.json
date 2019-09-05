@@ -15,6 +15,7 @@
       "Constants/*": ["src/constants/*"],
       "Containers/*": ["src/containers/*"],
       "Contexts/*": ["src/contexts/*"],
+      "Hooks/*": ["src/hooks/*"],
       "Styles/*": ["src/styles/*"],
       "Utils/*": ["src/utils/*"],
     }

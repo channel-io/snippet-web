@@ -74,6 +74,7 @@
     "rollup-plugin-alias": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-url": "^2.2.2",
     "storybook": "^1.0.0",
     "styled-components": "^4.3.2",
     "stylelint": "^10.1.0",
@@ -114,6 +115,7 @@
       "tsx"
     ],
     "moduleNameMapper": {
+      "\\.(png|jpg|gif|woff|woff2|ttf|eot|svg|mp3)$": "<rootDir>/src/__mocks__/fileMock.ts",
       "^Utils(.*)$": "<rootDir>/src/utils$1",
       "^Constants(.*)$": "<rootDir>/src/constants$1",
       "^Containers(.*)$": "<rootDir>/src/containers$1",

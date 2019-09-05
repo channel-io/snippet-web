@@ -1,5 +1,7 @@
 enum Colors {
   White = '#FFFFFF',
+  Black5 = 'rgba(0, 0, 0, .05)',
+  Black20 = 'rgba(0, 0, 0, .20)',
   Grey200 = '#F0F0F1',
   Grey300 = '#E4E4E5',
   Grey500 = '#A7A7AA',

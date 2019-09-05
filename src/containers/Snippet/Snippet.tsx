@@ -4,6 +4,7 @@ import React, { ReactElement } from 'react'
 /* Internal dependencies */
 import Button from 'Components/Button'
 import Divider from 'Components/Divider'
+import Dropdown from 'Components/Dropdown'
 import Input from 'Components/Input'
 import Image from 'Components/Image'
 import KeyValue from 'Components/KeyValue'
@@ -29,6 +30,8 @@ function getComponent(type?: string) {
       return Button
     case ComponentType.Divider:
       return Divider
+    case ComponentType.Dropdown:
+      return Dropdown
     case ComponentType.Image:
       return Image
     case ComponentType.KeyValue:

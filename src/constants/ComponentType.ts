@@ -1,6 +1,7 @@
 enum ComponentType {
   Button = 'button',
   Divider = 'divider',
+  Dropdown = 'dropdown',
   Image = 'image',
   Input = 'input',
   KeyValue = 'key-value',
