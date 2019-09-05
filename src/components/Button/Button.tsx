@@ -23,7 +23,7 @@ interface ButtonProps {
   style?: string,
   disabled?: boolean,
   action?: {
-    type: ActionType,
+    type: string,
     url?: string,
   },
 }
