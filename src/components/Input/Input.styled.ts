@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
 export const Label = styled.label`
   color: ${Colors.Grey900};
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   margin-bottom: 3px;
@@ -25,6 +25,7 @@ export const Label = styled.label`
 `
 
 export const Input = styled.input<InputProps>`
+  font-family: inherit;
   width: 100%;
   padding: 6px 8px;
   border: solid 1px ${(props) => (props.hasError ? Colors.Orange200 : Colors.Grey300)};
