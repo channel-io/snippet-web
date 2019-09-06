@@ -1,5 +1,5 @@
 /* External dependencies */
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
 import ContainerRefProvider from 'Containers/ContainerRefProvider'
@@ -19,15 +19,19 @@ interface MainProps {
   className?: string,
   submitting?: boolean,
   onSubmit?: (values: InputValues, componentId: string) => void,
-  items: Item[],
+  layout: Item[],
+  version?: string,
 }
 
 function Main({
   className,
   submitting,
   onSubmit,
-  items,
-}: MainProps) {
+  layout,
+  version,
+}: MainProps): ReactElement | null {
+  if (version !== 'v0') return null
+
   return (
     <ContainerRefProvider
       className={className}
@@ -36,7 +40,7 @@ function Main({
         submitting={submitting}
         onSubmit={onSubmit}
       >
-        <Snippet items={items} />
+        <Snippet items={layout} />
       </FormProvider>
     </ContainerRefProvider>
   )

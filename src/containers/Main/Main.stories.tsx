@@ -13,7 +13,7 @@ storiesOf('Main', module)
   .add('Basic', () => {
     const onSubmit = action('onSubmit')
     const submitting = boolean('submitting', false)
-    const items = object('items', [
+    const layout = object('layout', [
       {
         id: 'dropdown-top',
         type: 'dropdown',
@@ -146,9 +146,10 @@ storiesOf('Main', module)
     return (
       <SnippetPreview>
         <Main
-          items={items}
+          layout={layout}
           onSubmit={onSubmit}
           submitting={submitting}
+          version="v0"
         />
       </SnippetPreview>
     )
