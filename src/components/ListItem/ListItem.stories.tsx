@@ -1,7 +1,7 @@
 /* External dependencies */
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, object } from '@storybook/addon-knobs'
+import { withKnobs, text } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
 import SnippetPreview from 'Storybook/SnippetPreview'
@@ -18,16 +18,14 @@ storiesOf('ListItem', module)
     return (
       <SnippetPreview>
         <ListItem
+          id="item-basic"
           title={title}
           image={image}
           description={description}
-          url={url}
-        />
-        <ListItem
-          title={title}
-          image={image}
-          description={description}
-          url={url}
+          action={{
+            type: 'url',
+            url,
+          }}
         />
       </SnippetPreview>
     )
@@ -41,16 +39,14 @@ storiesOf('ListItem', module)
     return (
       <SnippetPreview>
         <ListItem
+          id="item-with-url"
           title={title}
           image={image}
           description={description}
-          url={url}
-        />
-        <ListItem
-          title={title}
-          image={image}
-          description={description}
-          url={url}
+          action={{
+            type: 'url',
+            url,
+          }}
         />
       </SnippetPreview>
     )
@@ -69,41 +65,19 @@ storiesOf('ListItem', module)
 
     const image = text('image', 'https://http.cat/200')
 
-    return (
-      <SnippetPreview>
-        <ListItem
-          title={title}
-          image={image}
-          description={description}
-        />
-        <ListItem
-          title={title}
-          image={image}
-          description={description}
-        />
-      </SnippetPreview>
-    )
-  })
-  .add('With collapse', () => {
-    const title = text('title', 'Channel.io')
-    const description = text('description', 'Live Chat and Team Communication')
-    const image = text('image', 'https://http.cat/200')
-    const collapse = object('collapse', [
-      {
-        id: 'collapse-item-1',
-        type: 'list-item',
-        title: 'collasped item',
-        image: 'https://http.cat/204',
-      },
-    ])
+    const url = text('url', '')
 
     return (
       <SnippetPreview>
         <ListItem
+          id="item-with-long-title"
           title={title}
           image={image}
           description={description}
-          collapse={collapse}
+          action={{
+            type: 'url',
+            url,
+          }}
         />
       </SnippetPreview>
     )

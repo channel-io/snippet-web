@@ -2,12 +2,13 @@
 import React, {
   useMemo,
   useCallback,
-  useState,
+  useContext,
   ReactElement,
 } from 'react'
 
 /* Internal dependencies */
-import ComponentType from 'Constants/ComponentType'
+import ActionType from 'Constants/ActionType'
+import FormContext from 'Contexts/FormContext'
 import isString from 'Utils/isString'
 import isObject from 'Utils/isObject'
 import * as Styled from './ListItem.styled'
@@ -17,40 +18,46 @@ interface ListItemProps {
   type?: string,
   title?: any,
   description?: string,
-  url?: string,
   image?: string,
-  collapse?: any[],
+  action?: {
+    type?: string,
+    url?: string,
+  },
 }
 
 function ListItem({
+  id,
   title,
   description,
   image,
-  url,
-  collapse,
+  action,
 }: ListItemProps): ReactElement | null {
-  const [fold, setFold] = useState(true)
-  const hasUrl = useMemo(() => isString(url) && url.length > 0, [url])
-  const hasCollapse = useMemo(() => Array.isArray(collapse) && collapse.length > 0, [collapse])
+  const { submit, submitting } = useContext(FormContext)
 
-  const handleOnClickTitle = useCallback((event: React.MouseEvent<HTMLParagraphElement>) => {
-    if (!hasUrl) {
-      return
-    }
+  const hasUrl = useMemo(() => {
+    if (!isObject(action)) return false
+    if (!isString(action.type) || action.type !== ActionType.URL) return false
+    if (!isString(action.url) || !action.url) return false
+    return true
+  }, [action])
 
-    event.stopPropagation()
-
-    const w = window.parent || window
-    w.open(url, '_blank', 'noopener noreferrer')
-  }, [url, hasUrl])
+  const hasSubmit = useMemo(() => {
+    if (!isObject(action)) return false
+    if (!isString(action.type) || action.type !== ActionType.Submit) return false
+    return true
+  }, [action])
 
   const handleOnClick = useCallback(() => {
-    if (!hasCollapse) {
+    if (hasUrl) {
+      const w = window.parent || window
+      w.open(action!.url, '_blank', 'noopener noreferrer')
       return
     }
 
-    setFold(!fold)
-  }, [hasCollapse, fold])
+    if (hasSubmit && !submitting) {
+      submit(id as string)
+    }
+  }, [hasUrl, hasSubmit, id, action, submit, submitting])
 
   const Image = useMemo(() => {
     if (!isString(image) || !image) {
@@ -74,49 +81,24 @@ function ListItem({
     )
   }, [description])
 
-  const Collapse = useMemo(() => {
-    if (fold || !hasCollapse) {
-      return null
-    }
-
-    return (collapse as Array<ListItemProps>).map((item) => {
-      if (!isObject(item)) return null
-      if (!isString(item.id)) return null
-      if (!isString(item.type) || item.type !== ComponentType.ListItem) return null
-
-      return (
-        <ListItem
-          {...item}
-          key={item.id}
-          id={item.id}
-        />
-      )
-    })
-  }, [fold, collapse, hasCollapse])
-
-  if (!isString(title) || !title) {
+  if (!isString(title) || !title || !isString(id) || !id) {
     return null
   }
 
   return (
-    <>
-      <Styled.Wrapper
-        active={hasCollapse}
-        onClick={handleOnClick}
-      >
-        { Image }
-        <Styled.Content>
-          <Styled.Title
-            active={hasUrl}
-            onClick={handleOnClickTitle}
-          >
-            { title }
-          </Styled.Title>
-          { Description }
-        </Styled.Content>
-      </Styled.Wrapper>
-      { Collapse }
-    </>
+    <Styled.Wrapper
+      active={hasUrl || hasSubmit}
+      onClick={handleOnClick}
+      disabled={submitting}
+    >
+      { Image }
+      <Styled.Content>
+        <Styled.Title>
+          { title }
+        </Styled.Title>
+        { Description }
+      </Styled.Content>
+    </Styled.Wrapper>
   )
 }
 

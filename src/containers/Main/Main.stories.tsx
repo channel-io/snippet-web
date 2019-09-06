@@ -87,14 +87,29 @@ storiesOf('Main', module)
             title: 'Channel.io',
             description: 'Live Chat and Team Communication',
             image: 'https://http.cat/200',
-            url: 'https://channel.io',
+            action: {
+              type: 'url',
+              url: 'https://channel.io',
+            },
           },
           {
             id: 'list-item-2',
             title: 'Walkinsights',
             description: 'Offline Customer Analytics',
             image: 'https://http.cat/418',
-            url: 'https://walkinsights.com',
+            action: {
+              type: 'url',
+              url: 'https://walkinsights.com',
+            },
+          },
+          {
+            id: 'list-item-3',
+            title: 'Sutmit Item',
+            description: 'Submit form values',
+            image: 'https://http.cat/204',
+            action: {
+              type: 'submit',
+            },
           },
         ],
       },

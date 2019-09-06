@@ -117,6 +117,7 @@
     "moduleNameMapper": {
       "\\.(png|jpg|gif|woff|woff2|ttf|eot|svg|mp3)$": "<rootDir>/src/__mocks__/fileMock.ts",
       "^Utils(.*)$": "<rootDir>/src/utils$1",
+      "^Contexts(.*)$": "<rootDir>/src/contexts$1",
       "^Constants(.*)$": "<rootDir>/src/constants$1",
       "^Containers(.*)$": "<rootDir>/src/containers$1",
       "^Components(.*)$": "<rootDir>/src/components$1",
