@@ -34,6 +34,25 @@ storiesOf('Main', module)
         url: 'https://http.cat/200',
       },
       {
+        id: 'text-1',
+        type: 'text',
+        text: 'Channel.io',
+        style: 'h1',
+        color: 'highlited',
+      },
+      {
+        id: 'text-2',
+        type: 'text',
+        text: 'Live Chat and Team Communication',
+        style: 'h2',
+        color: 'success',
+      },
+      {
+        id: 'text-3',
+        type: 'text',
+        text: 'Don’t lose your website customers Use Channel, the messenger for customer acquisition',
+      },
+      {
         id: 'divider-1',
         type: 'divider',
       },

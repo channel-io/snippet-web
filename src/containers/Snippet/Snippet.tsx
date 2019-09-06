@@ -11,6 +11,7 @@ import KeyValue from 'Components/KeyValue'
 import List from 'Components/List'
 import ListItem from 'Components/ListItem'
 import Spacer from 'Components/Spacer'
+import Text from 'Components/Text'
 import ComponentType from 'Constants/ComponentType'
 import isObject from 'Utils/isObject'
 import isString from 'Utils/isString'
@@ -44,6 +45,8 @@ function getComponent(type?: string) {
       return Spacer
     case ComponentType.Input:
       return Input
+    case ComponentType.Text:
+      return Text
     default:
       return null
   }
