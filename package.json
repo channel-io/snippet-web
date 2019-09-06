@@ -8,7 +8,9 @@
     "test": "jest",
     "build": "npm run build:clean && npm run build:all",
     "build:clean": "rimraf build",
-    "build:all": "rollup -c",
+    "build:all": "npm run build:typescript && npm run build:rollup",
+    "build:rollup": "rollup -c",
+    "build:typescript": "tsc",
     "storybook": "start-storybook -p 4004",
     "build:storybook": "rimraf storybook-static && build-storybook",
     "deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static",
@@ -31,6 +33,7 @@
     "components",
     "channelio"
   ],
+  "types": "./build/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
