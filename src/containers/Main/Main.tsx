@@ -20,7 +20,6 @@ interface MainProps {
   submitting?: boolean,
   onSubmit?: (values: InputValues, componentId: string) => void,
   layout: Item[],
-  version?: string,
 }
 
 function Main({
@@ -28,10 +27,7 @@ function Main({
   submitting,
   onSubmit,
   layout,
-  version,
 }: MainProps): ReactElement | null {
-  if (version !== 'v0') return null
-
   return (
     <ContainerRefProvider
       className={className}

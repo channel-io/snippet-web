@@ -149,7 +149,6 @@ storiesOf('Main', module)
           layout={layout}
           onSubmit={onSubmit}
           submitting={submitting}
-          version="v0"
         />
       </SnippetPreview>
     )
