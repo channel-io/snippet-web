@@ -6,7 +6,7 @@
 # Installation
 Make sure you have react and styled-componets, then install the snippet:
 ```
-npm install --save @zoyi/channel-snippet
+npm install --save @channel.io/snippet
 ```
 
 # License
