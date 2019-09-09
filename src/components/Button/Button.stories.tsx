@@ -10,8 +10,8 @@ import {
 } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
-import Main from 'Containers/Main'
+import SnippetPreview from '../../../storybook/SnippetPreview'
+import Main from '../../containers/Main'
 import Button from './Button'
 
 storiesOf('Button', module)
@@ -90,7 +90,7 @@ storiesOf('Button', module)
     <SnippetPreview>
       <Main
         submitting
-        items={[
+        layout={[
           {
             id: 'default',
             type: 'button',

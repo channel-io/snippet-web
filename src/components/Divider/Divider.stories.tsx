@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
+import SnippetPreview from '../../../storybook/SnippetPreview'
 import Divider from './Divider'
 
 storiesOf('Divider', module)

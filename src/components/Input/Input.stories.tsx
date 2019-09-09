@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
-import FormProvider from 'Containers/FormProvider'
+import SnippetPreview from '../../../storybook/SnippetPreview'
+import FormProvider from '../../containers/FormProvider'
 import Input from './Input'
 
 storiesOf('Input', module)

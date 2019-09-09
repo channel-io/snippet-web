@@ -2,7 +2,7 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 /* Internal dependencies */
-import Colors from 'Styles/colors'
+import Colors from '../../src/styles/colors'
 
 const FontFamily = [
   'Avenir',

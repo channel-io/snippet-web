@@ -2,9 +2,9 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
-import ListItem from 'Components/ListItem'
-import isObject from 'Utils/isObject'
-import isString from 'Utils/isString'
+import isObject from '../../utils/isObject'
+import isString from '../../utils/isString'
+import ListItem from '../ListItem'
 import * as Styled from './List.styled'
 
 interface ListProps {

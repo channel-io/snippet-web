@@ -13,17 +13,5 @@ module.exports = ({ config }) => {
   })
 
   config.resolve.extensions.push('.ts', '.tsx')
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    Storybook: path.resolve(rootDirectory, 'storybook'),
-    Styles: path.resolve(srcDirectory, 'styles'),
-    Containers: path.resolve(srcDirectory, 'containers'),
-    Constants: path.resolve(srcDirectory, 'constants'),
-    Components: path.resolve(srcDirectory, 'components'),
-    Contexts: path.resolve(srcDirectory, 'contexts'),
-    Hooks: path.resolve(srcDirectory, 'hooks'),
-    Utils: path.resolve(srcDirectory, 'utils'),
-  }
   return config
 }

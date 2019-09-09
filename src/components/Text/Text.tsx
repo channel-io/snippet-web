@@ -2,8 +2,8 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
-import isString from 'Utils/isString'
-import isNumber from 'Utils/isNumber'
+import isString from '../../utils/isString'
+import isNumber from '../../utils/isNumber'
 import * as Styled from './Text.styled'
 
 interface TextProps {

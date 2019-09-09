@@ -2,9 +2,9 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
-import ContainerRefProvider from 'Containers/ContainerRefProvider'
-import FormProvider from 'Containers/FormProvider'
-import Snippet from 'Containers/Snippet'
+import ContainerRefProvider from '../ContainerRefProvider'
+import FormProvider from '../FormProvider'
+import Snippet from '../Snippet'
 
 interface InputValues {
   [id: string]: number | string,

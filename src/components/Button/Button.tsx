@@ -7,13 +7,13 @@ import React, {
 } from 'react'
 
 /* Internal dependencies */
-import ActionType from 'Constants/ActionType'
-import Loader from 'Components/Loader'
-import FormContext from 'Contexts/FormContext'
-import isString from 'Utils/isString'
-import isBoolean from 'Utils/isBoolean'
-import isObject from 'Utils/isObject'
-import Colors from 'Styles/colors'
+import ActionType from '../../constants/ActionType'
+import FormContext from '../../contexts/FormContext'
+import isString from '../../utils/isString'
+import isBoolean from '../../utils/isBoolean'
+import isObject from '../../utils/isObject'
+import Colors from '../../styles/colors'
+import Loader from '../Loader'
 import ButtonType from './ButtonType'
 import * as Styled from './Button.styled'
 

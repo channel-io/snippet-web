@@ -2,7 +2,7 @@
 import React, { useRef, PropsWithChildren } from 'react'
 
 /* Internal dependencies */
-import ContainerRefContext from 'Contexts/ContainerRefContext'
+import ContainerRefContext from '../../contexts/ContainerRefContext'
 import * as Styled from './ContainerRefProvider.styled'
 
 interface ContainerRefProviderProps {

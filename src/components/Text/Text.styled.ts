@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 /* Internal dependencies */
-import Colors from 'Styles/colors'
+import Colors from '../../styles/colors'
 import TextColors from './TextColors'
 import TextStyles from './TextStyles'
 

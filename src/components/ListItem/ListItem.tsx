@@ -7,10 +7,10 @@ import React, {
 } from 'react'
 
 /* Internal dependencies */
-import ActionType from 'Constants/ActionType'
-import FormContext from 'Contexts/FormContext'
-import isString from 'Utils/isString'
-import isObject from 'Utils/isObject'
+import ActionType from '../../constants/ActionType'
+import FormContext from '../../contexts/FormContext'
+import isString from '../../utils/isString'
+import isObject from '../../utils/isObject'
 import * as Styled from './ListItem.styled'
 
 interface ListItemProps {

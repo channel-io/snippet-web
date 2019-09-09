@@ -1,4 +1,4 @@
 /* Internal dependencies */
-import Main from 'Containers/Main'
+import Main from './containers/Main'
 
 export default Main

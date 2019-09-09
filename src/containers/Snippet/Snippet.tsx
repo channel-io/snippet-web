@@ -2,19 +2,19 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
-import Button from 'Components/Button'
-import Divider from 'Components/Divider'
-import Dropdown from 'Components/Dropdown'
-import Input from 'Components/Input'
-import Image from 'Components/Image'
-import KeyValue from 'Components/KeyValue'
-import List from 'Components/List'
-import ListItem from 'Components/ListItem'
-import Spacer from 'Components/Spacer'
-import Text from 'Components/Text'
-import ComponentType from 'Constants/ComponentType'
-import isObject from 'Utils/isObject'
-import isString from 'Utils/isString'
+import Button from '../../components/Button'
+import Divider from '../../components/Divider'
+import Dropdown from '../../components/Dropdown'
+import Input from '../../components/Input'
+import Image from '../../components/Image'
+import KeyValue from '../../components/KeyValue'
+import List from '../../components/List'
+import ListItem from '../../components/ListItem'
+import Spacer from '../../components/Spacer'
+import Text from '../../components/Text'
+import ComponentType from '../../constants/ComponentType'
+import isObject from '../../utils/isObject'
+import isString from '../../utils/isString'
 
 interface SnippetProps {
   items: any,

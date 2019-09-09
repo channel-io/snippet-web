@@ -10,10 +10,10 @@ import React, {
 } from 'react'
 
 /* Internal dependencies */
-import FormContext from 'Contexts/FormContext'
-import isNumber from 'Utils/isNumber'
-import isString from 'Utils/isString'
-import isBoolean from 'Utils/isBoolean'
+import FormContext from '../../contexts/FormContext'
+import isNumber from '../../utils/isNumber'
+import isString from '../../utils/isString'
+import isBoolean from '../../utils/isBoolean'
 import * as Styled from './Input.styled'
 
 interface InputProps {

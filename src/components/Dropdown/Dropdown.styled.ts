@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components'
 
 /* Internal dependencies */
-import Colors from 'Styles/colors'
+import Colors from '../../styles/colors'
 
 interface OptionWrapperProps {
   maxHeight: number,

@@ -2,7 +2,6 @@ const path = require('path')
 
 const resolve = require('rollup-plugin-node-resolve')
 const babel = require('rollup-plugin-babel')
-const alias = require('rollup-plugin-alias')
 const url = require('rollup-plugin-url')
 
 const rootDirectory = path.resolve(__dirname)
@@ -32,39 +31,6 @@ module.exports = {
     'styled-components',
   ],
   plugins: [
-    alias({
-      resolve: extensions,
-      entries: [
-        {
-          find: /^Components(.*)$/,
-          replacement: `${path.resolve(srcDirectory, 'components')}$1/index`,
-        },
-        {
-          find: 'Constants',
-          replacement: path.resolve(srcDirectory, 'constants'),
-        },
-        {
-          find: /^Containers(.*)$/,
-          replacement: `${path.resolve(srcDirectory, 'containers')}$1/index`,
-        },
-        {
-          find: 'Contexts',
-          replacement: path.resolve(srcDirectory, 'contexts'),
-        },
-        {
-          find: 'Hooks',
-          replacement: path.resolve(srcDirectory, 'hooks'),
-        },
-        {
-          find: 'Utils',
-          replacement: path.resolve(srcDirectory, 'utils'),
-        },
-        {
-          find: 'Styles',
-          replacement: path.resolve(srcDirectory, 'styles'),
-        },
-      ],
-    }),
     url(),
     resolve({
       extensions,

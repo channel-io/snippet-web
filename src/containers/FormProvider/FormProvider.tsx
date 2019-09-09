@@ -8,7 +8,7 @@ import React, {
 } from 'react'
 
 /* Internal dependencies */
-import FormContext from 'Contexts/FormContext'
+import FormContext from '../../contexts/FormContext'
 
 interface InputValues {
   [id: string]: number | string,

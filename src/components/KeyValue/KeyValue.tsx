@@ -2,8 +2,8 @@
 import React from 'react'
 
 /* Internal dependencies */
-import isNumber from 'Utils/isNumber'
-import isString from 'Utils/isString'
+import isNumber from '../../utils/isNumber'
+import isString from '../../utils/isString'
 import * as Styled from './KeyValue.styled'
 
 interface KeyValueProps {

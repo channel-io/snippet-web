@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
+import SnippetPreview from '../../../storybook/SnippetPreview'
 import Text from './Text'
 
 storiesOf('Text', module)

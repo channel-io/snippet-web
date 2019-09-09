@@ -2,7 +2,7 @@
 import { useContext, useEffect } from 'react'
 
 /* Internal dependencies */
-import ContainerRefContext from 'Contexts/ContainerRefContext'
+import ContainerRefContext from '../contexts/ContainerRefContext'
 import useForceUpdate from './useForceUpdate'
 
 function useContainer() {

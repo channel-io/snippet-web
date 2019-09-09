@@ -5,7 +5,7 @@ import { withKnobs, object, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
+import SnippetPreview from '../../../storybook/SnippetPreview'
 import Main from './Main'
 
 storiesOf('Main', module)

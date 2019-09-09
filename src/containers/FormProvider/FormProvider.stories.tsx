@@ -5,9 +5,9 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
-import Input from 'Components/Input'
-import Button from 'Components/Button'
+import SnippetPreview from '../../../storybook/SnippetPreview'
+import Input from '../../components/Input'
+import Button from '../../components/Button'
 import FormProvider from './FormProvider'
 
 storiesOf('FormProvider', module)

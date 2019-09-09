@@ -2,7 +2,7 @@
 import React, { ReactElement } from 'react'
 
 /* Internal dependencies */
-import isString from 'Utils/isString'
+import isString from '../../utils/isString'
 import * as Styled from './Image.styled'
 
 interface ImageProps {

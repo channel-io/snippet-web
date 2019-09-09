@@ -5,7 +5,7 @@ import { withKnobs, select } from '@storybook/addon-knobs'
 import styled from 'styled-components'
 
 /* Internal dependencies */
-import SnippetPreview from 'Storybook/SnippetPreview'
+import SnippetPreview from '../../../storybook/SnippetPreview'
 import Spacer from './Spacer'
 
 const DummyContent = styled.div`

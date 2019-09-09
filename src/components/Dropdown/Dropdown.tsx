@@ -9,14 +9,14 @@ import React, {
 } from 'react'
 
 /* Internal dependencies */
-import FormContext from 'Contexts/FormContext'
-import useContainer from 'Hooks/useContainer'
-import isString from 'Utils/isString'
-import isNumber from 'Utils/isNumber'
-import isObject from 'Utils/isObject'
-import isBoolean from 'Utils/isBoolean'
-import TriangelDownImage from 'Styles/images/dropdown-triangle-down.svg'
-import TriangelUpImage from 'Styles/images/dropdown-triangle-up.svg'
+import FormContext from '../../contexts/FormContext'
+import useContainer from '../../hooks/useContainer'
+import isString from '../../utils/isString'
+import isNumber from '../../utils/isNumber'
+import isObject from '../../utils/isObject'
+import isBoolean from '../../utils/isBoolean'
+import TriangelDownImage from '../../styles/images/dropdown-triangle-down.svg'
+import TriangelUpImage from '../../styles/images/dropdown-triangle-up.svg'
 import * as Styled from './Dropdown.styled'
 
 const MARGIN_BOTTOM = 10
