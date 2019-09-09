@@ -26,12 +26,19 @@ storiesOf('Text', module)
       'warning',
     ], '')
 
+    const align = select('align', [
+      'left',
+      'center',
+      'right',
+    ], 'left')
+
     return (
       <SnippetPreview>
         <Text
           text={textProp}
           color={color}
           style={style}
+          align={align}
         />
       </SnippetPreview>
     )
@@ -47,21 +54,30 @@ storiesOf('Text', module)
       'warning',
     ], '')
 
+    const align = select('align', [
+      'left',
+      'center',
+      'right',
+    ], 'left')
+
     return (
       <SnippetPreview>
         <Text
           text={textProp}
           color={color}
           style="h1"
+          align={align}
         />
         <Text
           text={textProp}
           color={color}
           style="h2"
+          align={align}
         />
         <Text
           text={textProp}
           color={color}
+          align={align}
         />
       </SnippetPreview>
     )

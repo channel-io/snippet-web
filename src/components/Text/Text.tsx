@@ -11,9 +11,15 @@ interface TextProps {
   text?: any,
   style?: string,
   color?: string,
+  align?: string,
 }
 
-function Text({ text, style, color }: TextProps): ReactElement | null {
+function Text({
+  text,
+  style,
+  color,
+  align,
+}: TextProps): ReactElement | null {
   if (!isString(text) && !isNumber(text)) {
     return null
   }
@@ -22,6 +28,7 @@ function Text({ text, style, color }: TextProps): ReactElement | null {
     <Styled.Text
       textStyle={style}
       textColor={color}
+      align={align}
     >
       { text }
     </Styled.Text>

@@ -6,9 +6,12 @@ import Colors from '../../styles/colors'
 import TextColors from './TextColors'
 import TextStyles from './TextStyles'
 
+const SUPPORTED_ALIGN = ['center', 'left', 'right']
+
 interface TextProps {
   textStyle?: string,
   textColor?: string,
+  align?: string,
 }
 
 function getFontSize(style?: string): number {
@@ -47,11 +50,19 @@ function getFontColor(color?: string): string {
   }
 }
 
+function getAlign(align?: string) {
+  if (SUPPORTED_ALIGN.includes(align as string)) {
+    return align
+  }
+  return 'left'
+}
+
 export const Text = styled.div<TextProps>`
   font-size: ${(props) => getFontSize(props.textStyle)}px;
   font-weight: ${(props) => getFontWeight(props.textStyle)};
   color: ${(props) => getFontColor(props.textColor)};
   white-space: pre-line;
+  text-align: ${(props) => getAlign(props.align)};
   padding: 0 14px;
   margin-bottom: 8px;
 `
