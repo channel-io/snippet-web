@@ -40,7 +40,7 @@ function getFontColor(submitting: boolean, disabled?: boolean, style?: string) {
 
 export const Wrapper = styled.div`
   padding: 0 14px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 `
 
 export const Button = styled.button<ButtonProps>`

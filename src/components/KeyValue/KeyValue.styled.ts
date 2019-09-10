@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Colors from '../../styles/colors'
 
 export const Wrapper = styled.div`
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 `
 
 export const Item = styled.div`

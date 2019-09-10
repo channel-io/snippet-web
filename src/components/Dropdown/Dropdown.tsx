@@ -19,8 +19,6 @@ import TriangelDownImage from '../../styles/images/dropdown-triangle-down.svg'
 import TriangelUpImage from '../../styles/images/dropdown-triangle-up.svg'
 import * as Styled from './Dropdown.styled'
 
-const MARGIN_BOTTOM = 10
-
 interface Option {
   id: string,
   label: string,
@@ -43,8 +41,6 @@ function Dropdown({
   error,
   disabled,
 }: DropdownProps) {
-  const [maxHeight, setMaxHeight] = useState(0)
-
   const [show, setShow] = useState(false)
   const [toTop, setToTop] = useState(false)
   const [hasError, setHasError] = useState(false)
@@ -122,9 +118,6 @@ function Dropdown({
     const bottomSpaceHeight = containerRect.bottom - targetRect.bottom
     const isTopSpaceBigger = topSpaceHeight > bottomSpaceHeight
 
-    const maxSpaceHeight = (isTopSpaceBigger) ? topSpaceHeight : bottomSpaceHeight
-
-    setMaxHeight(maxSpaceHeight - MARGIN_BOTTOM)
     setToTop(isTopSpaceBigger)
     setShow(true)
   }, [show, container, submitting])
@@ -166,13 +159,12 @@ function Dropdown({
     return (
       <Styled.OptionWrapper
         ref={optionRef}
-        maxHeight={maxHeight}
         toTop={toTop}
       >
         { optionItems }
       </Styled.OptionWrapper>
     )
-  }, [show, maxHeight, optionItems, toTop])
+  }, [show, optionItems, toTop])
 
   const isDisabled = useMemo(() => (submitting || (
     isBoolean(disabled) ? disabled : false)

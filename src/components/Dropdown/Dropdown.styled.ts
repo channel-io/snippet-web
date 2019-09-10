@@ -5,7 +5,6 @@ import styled, { css } from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface OptionWrapperProps {
-  maxHeight: number,
   toTop: boolean,
 }
 
@@ -58,8 +57,9 @@ export const Label = styled.span<LabelProps>`
 export const OptionWrapper = styled.div<OptionWrapperProps>`
   width: 100%;
   background-color: ${Colors.White};
+  padding: 8px 0;
   position: absolute;
-  max-height: ${(props) => (props.maxHeight)}px;
+  max-height: 345px;
   overflow-y: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px 0 ${Colors.Black20}, 0 0 0 1px ${Colors.Black5};
@@ -76,7 +76,7 @@ export const OptionItem = styled.div<OptionItemProps>`
   padding: 7px 16px;
   font-size: 14px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
 
   &:hover {
