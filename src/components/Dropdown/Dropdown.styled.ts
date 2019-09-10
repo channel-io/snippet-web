@@ -5,7 +5,6 @@ import styled, { css } from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface OptionWrapperProps {
-  maxHeight: number,
   toTop: boolean,
 }
 
