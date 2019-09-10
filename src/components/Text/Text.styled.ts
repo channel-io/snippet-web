@@ -57,6 +57,28 @@ function getAlign(align?: string) {
   return 'left'
 }
 
+function getMarginTop(style?: string): number {
+  switch (style) {
+    case TextStyles.H1:
+      return 6
+    case TextStyles.H2:
+    case TextStyles.Paragraph:
+    default:
+      return 4
+  }
+}
+
+function getMarginBottom(style?: string): number {
+  switch (style) {
+    case TextStyles.H1:
+      return 6
+    case TextStyles.H2:
+    case TextStyles.Paragraph:
+    default:
+      return 3
+  }
+}
+
 export const Text = styled.div<TextProps>`
   font-size: ${(props) => getFontSize(props.textStyle)}px;
   font-weight: ${(props) => getFontWeight(props.textStyle)};
@@ -64,5 +86,6 @@ export const Text = styled.div<TextProps>`
   white-space: pre-line;
   text-align: ${(props) => getAlign(props.align)};
   padding: 0 14px;
-  margin-bottom: 8px;
+  margin-top: ${(props) => getMarginTop(props.textStyle)}px;
+  margin-bottom: ${(props) => getMarginBottom(props.textStyle)}px;
 `

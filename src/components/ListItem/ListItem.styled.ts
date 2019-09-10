@@ -79,7 +79,7 @@ export const Image = styled.div<ImageProps>`
   margin-right: 12px;
   width: 40px;
   height: 40px;
-  border-radius: 6px;
+  border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(${(props) => props.src});
