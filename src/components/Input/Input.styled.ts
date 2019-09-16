@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 `
 
 export const Label = styled.label`
+  display: block;
   color: ${Colors.Grey900};
   font-size: 13px;
   font-weight: bold;
