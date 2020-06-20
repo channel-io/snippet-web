@@ -5,13 +5,13 @@ import styled, { keyframes } from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface LoaderProps {
-  position?: string,
-  top?: number,
-  right?: number,
-  left?: number,
-  bottom?: number,
-  size?: number,
-  strokeWidth?: number,
+  position?: string
+  top?: number
+  right?: number
+  left?: number
+  bottom?: number
+  size?: number
+  strokeWidth?: number
 }
 
 const loaderAnimation = keyframes`

@@ -7,11 +7,11 @@ import isNumber from '../../utils/isNumber'
 import * as Styled from './Text.styled'
 
 interface TextProps {
-  id?: string,
-  text?: any,
-  style?: string,
-  color?: string,
-  align?: string,
+  id?: string
+  text?: any
+  style?: string
+  color?: string
+  align?: string
 }
 
 function Text({

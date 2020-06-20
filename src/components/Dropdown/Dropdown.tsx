@@ -20,17 +20,17 @@ import TriangelUpImage from '../../styles/images/dropdown-triangle-up.svg'
 import * as Styled from './Dropdown.styled'
 
 interface Option {
-  id: string,
-  label: string,
+  id: string
+  label: string
 }
 
 interface DropdownProps {
-  id?: string,
-  label?: string,
-  value?: string,
-  items?: Option[],
-  error?: string,
-  disabled?: boolean,
+  id?: string
+  label?: string
+  value?: string
+  items?: Option[]
+  error?: string
+  disabled?: boolean
 }
 
 function Dropdown({

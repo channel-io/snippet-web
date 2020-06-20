@@ -6,8 +6,8 @@ import isString from '../../utils/isString'
 import * as Styled from './Image.styled'
 
 interface ImageProps {
-  id?: string,
-  url?: any,
+  id?: string
+  url?: any
 }
 
 function Image({ url }: ImageProps): ReactElement | null {

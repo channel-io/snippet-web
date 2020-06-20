@@ -6,7 +6,7 @@ import ContainerRefContext from '../../contexts/ContainerRefContext'
 import * as Styled from './ContainerRefProvider.styled'
 
 interface ContainerRefProviderProps {
-  className?: string,
+  className?: string
 }
 
 function ContainerRefProvider({ className, children }: PropsWithChildren<ContainerRefProviderProps>) {

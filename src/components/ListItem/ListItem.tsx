@@ -14,15 +14,15 @@ import isObject from '../../utils/isObject'
 import * as Styled from './ListItem.styled'
 
 interface ListItemProps {
-  id?: string,
-  type?: string,
-  title?: any,
-  description?: string,
-  image?: string,
+  id?: string
+  type?: string
+  title?: any
+  description?: string
+  image?: string
   action?: {
-    type?: string,
-    url?: string,
-  },
+    type?: string
+    url?: string
+  }
 }
 
 function ListItem({

@@ -17,12 +17,12 @@ import isObject from '../../utils/isObject'
 import isString from '../../utils/isString'
 
 interface SnippetProps {
-  items: any,
+  items: any
 }
 
 interface Item {
-  id?: string,
-  type?: string,
+  id?: string
+  type?: string
 }
 
 function getComponent(type?: string) {

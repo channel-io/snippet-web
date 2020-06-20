@@ -6,12 +6,12 @@ import Colors from '../../styles/colors'
 import ButtonType from './ButtonType'
 
 interface ButtonProps {
-  submitting: boolean,
-  buttonType?: string,
+  submitting: boolean
+  buttonType?: string
 }
 
 interface LabelProps {
-  isLink: boolean,
+  isLink: boolean
 }
 
 function getBackgroundColor(submitting: boolean, disabled?: boolean, style?: string) {

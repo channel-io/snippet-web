@@ -17,12 +17,12 @@ import isBoolean from '../../utils/isBoolean'
 import * as Styled from './Input.styled'
 
 interface InputProps {
-  id?: string,
-  value?: string,
-  label?: string,
-  placeholder?: string,
-  disabled?: boolean,
-  error?: string,
+  id?: string
+  value?: string
+  label?: string
+  placeholder?: string
+  disabled?: boolean
+  error?: string
 }
 
 function Input({
