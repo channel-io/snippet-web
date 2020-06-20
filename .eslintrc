@@ -1,55 +1,8 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks"
-  ],
-  "rules": {
-    "max-len": [
-      "error",
-      {
-        "code": 120,
-        "tabWidth": 2,
-        "ignoreTemplateLiterals": false,
-        "ignoreRegExpLiterals": false
-      }
-    ],
-    "semi": ["error", "never"],
-    "no-console": "error",
-    "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off",
-    "react/prop-types": "off",
-    "react/jsx-curly-spacing": ["error", {
-      "when": "never",
-      "children": { "when": "always" },
-    }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-    "react/jsx-props-no-spreading": "off",
-    "react/style-prop-object": "off",
-    "@typescript-eslint/member-delimiter-style": [1, {
-      "multiline": {
-        "delimiter": "comma",
-        "requireLast": true
-      },
-      "singleline": {
-        "delimiter": "comma",
-        "requireLast": false
-      }
-    }]
-  },
+  "extends": "@channel.io/eslint-config",
   "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
-    },
     "import/resolver": {
-      "typescript": {},
-    },
+      "typescript": {}
+    }
   }
 }
