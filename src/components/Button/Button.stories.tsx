@@ -77,11 +77,13 @@ storiesOf('Button', module)
       <Button
         id="outline"
         label="outline"
+        // eslint-disable-next-line react/style-prop-object
         style="outline"
       />
       <Button
         id="link"
         label="link"
+        // eslint-disable-next-line react/style-prop-object
         style="link"
       />
     </SnippetPreview>
