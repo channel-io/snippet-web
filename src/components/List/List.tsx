@@ -8,8 +8,8 @@ import ListItem from '../ListItem'
 import * as Styled from './List.styled'
 
 interface ListProps {
-  id?: string,
-  items?: { id: string }[],
+  id?: string
+  items?: { id: string }[]
 }
 
 function List({ items }: ListProps): ReactElement | null {

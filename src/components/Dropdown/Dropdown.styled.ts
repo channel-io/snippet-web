@@ -5,21 +5,21 @@ import styled, { css } from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface OptionWrapperProps {
-  toTop: boolean,
+  toTop: boolean
 }
 
 interface SelectProps {
-  disabled: boolean,
-  hasError: boolean,
+  disabled: boolean
+  hasError: boolean
 }
 
 interface LabelProps {
-  unselected?: boolean,
-  disabled: boolean,
+  unselected?: boolean
+  disabled: boolean
 }
 
 interface OptionItemProps {
-  selected: boolean,
+  selected: boolean
 }
 
 export const Wrapper = styled.div`

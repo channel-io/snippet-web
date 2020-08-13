@@ -7,19 +7,19 @@ import FormProvider from '../FormProvider'
 import Snippet from '../Snippet'
 
 interface InputValues {
-  [id: string]: number | string,
+  [id: string]: number | string
 }
 
 interface Item {
-  id?: string,
-  type?: string,
+  id?: string
+  type?: string
 }
 
 interface MainProps {
-  className?: string,
-  submitting?: boolean,
-  onSubmit?: (values: InputValues, componentId: string) => void,
-  layout: Item[],
+  className?: string
+  submitting?: boolean
+  onSubmit?: (values: InputValues, componentId: string) => void
+  layout: Item[]
 }
 
 function Main({

@@ -18,14 +18,14 @@ import ButtonType from './ButtonType'
 import * as Styled from './Button.styled'
 
 interface ButtonProps {
-  id?: string,
-  label?: string,
-  style?: string,
-  disabled?: boolean,
+  id?: string
+  label?: string
+  style?: string
+  disabled?: boolean
   action?: {
-    type: string,
-    url?: string,
-  },
+    type: string
+    url?: string
+  }
 }
 
 function Button({

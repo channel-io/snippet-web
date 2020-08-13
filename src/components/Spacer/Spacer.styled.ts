@@ -1,7 +1,6 @@
 /* External dependencies */
 import styled from 'styled-components'
 
-
 interface SpacerProps {
   size?: string
 }

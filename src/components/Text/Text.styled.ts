@@ -9,9 +9,9 @@ import TextStyles from './TextStyles'
 const SUPPORTED_ALIGN = ['center', 'left', 'right']
 
 interface TextProps {
-  textStyle?: string,
-  textColor?: string,
-  align?: string,
+  textStyle?: string
+  textColor?: string
+  align?: string
 }
 
 function getFontSize(style?: string): number {

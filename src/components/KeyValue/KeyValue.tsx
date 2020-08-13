@@ -7,8 +7,8 @@ import isString from '../../utils/isString'
 import * as Styled from './KeyValue.styled'
 
 interface KeyValueProps {
-  id?: string,
-  items?: any,
+  id?: string
+  items?: any
 }
 
 function KeyValue({ items }: KeyValueProps) {

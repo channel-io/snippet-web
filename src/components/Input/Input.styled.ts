@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface InputProps {
-  hasError: boolean,
+  hasError: boolean
 }
 
 const TEXT_LEFT_MARGIN = 3

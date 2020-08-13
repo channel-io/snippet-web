@@ -5,18 +5,17 @@ import styled from 'styled-components'
 import Colors from '../../styles/colors'
 
 interface WrapperProps {
-  disabled?: boolean,
-  active?: boolean,
+  disabled?: boolean
+  active?: boolean
 }
 
 interface ImageProps {
-  src: string,
+  src: string
 }
 
 const LINE_HEIGHT = 18
 const TITLE_MAX_LINE = 2
 const DESCRIPTION_MAX_LINE = 1
-
 
 function getWrapperCursor({ disabled, active }: WrapperProps): string {
   if (disabled) {

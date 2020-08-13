@@ -11,12 +11,12 @@ import React, {
 import FormContext from '../../contexts/FormContext'
 
 interface InputValues {
-  [id: string]: number | string,
+  [id: string]: number | string
 }
 
 export interface FormProviderProps {
-  submitting?: boolean,
-  onSubmit?: (values: InputValues, componentId: string) => void,
+  submitting?: boolean
+  onSubmit?: (values: InputValues, componentId: string) => void
 }
 
 function FormProvider({
