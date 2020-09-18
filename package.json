@@ -129,7 +129,8 @@
       "^Constants(.*)$": "<rootDir>/src/constants$1",
       "^Containers(.*)$": "<rootDir>/src/containers$1",
       "^Components(.*)$": "<rootDir>/src/components$1",
-      "^Styles(.*)$": "<rootDir>/src/styles$1"
+      "^Styles(.*)$": "<rootDir>/src/styles$1",
+      "^Types(.*)$": "<rootDir>/src/types$1"
     },
     "transform": {
       ".jsx?$": "babel-jest",
