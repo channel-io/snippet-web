@@ -19,14 +19,14 @@
     "lint:all": "npm run lint:typescript && npm run lint:styled",
     "lint:staged": "lint-staged"
   },
-  "author": "ZOYI",
+  "author": "Channel Corporation",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoyi/channel-snippet-web"
+    "url": "https://github.com/channel-io/snippet-web"
   },
   "bugs": {
-    "url": "https://github.com/zoyi/channel-snippet-web/issues"
+    "url": "https://github.com/channel-io/snippet-web/issues"
   },
   "keywords": [
     "react",
