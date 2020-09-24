@@ -36,7 +36,6 @@ storiesOf('TimelineEventItem', module)
           color={EventColor.White}
           hour24
         >
-          아침 루틴 체크 - 세안, 토너, 로션, BB크림
           Check morning routine - Wash, Toner
         </TimelineEventItem>
         <TimelineEventItem
@@ -44,21 +43,21 @@ storiesOf('TimelineEventItem', module)
           color={EventColor.Green}
           hour24
         >
-          선크림 체크
+          Check Suncream
         </TimelineEventItem>
         <TimelineEventItem
           date={new Date(new Date().setHours(16, 45))}
           color={EventColor.Cobalt}
           hour24
         >
-          자동메시지 발송
+          Send automated message
         </TimelineEventItem>
         <TimelineEventItem
           date={new Date(new Date().setHours(16, 53))}
           color={EventColor.Orange}
           hour24
         >
-          음성메시지 확인
+          Check voice message
         </TimelineEventItem>
       </>
     </SnippetPreview>

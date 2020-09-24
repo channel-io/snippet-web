@@ -2,12 +2,9 @@
 import React, { useMemo } from 'react'
 
 /* Internal Dependencies */
+import leadingZero from '../../utils/leadingZero'
 import EventColor from './EventColor'
 import { Wrapper, Mark, Time, Value } from './TimelineEventItem.styled'
-
-function leadingZero(n: number): string {
-  return (n < 10) ? `0${n}` : `${n}`
-}
 
 export interface TimelineEventItemProps extends React.HTMLAttributes<HTMLDivElement> {
   date: Date
