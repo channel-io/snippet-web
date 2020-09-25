@@ -1,7 +1,9 @@
+import ComponentType from '../constants/ComponentType'
 import TimelineEvent from './TimelineEvent'
 
 declare type Timeline = {
-  type: 'timeline'
+  id?: string
+  type: ComponentType.Timeline
   hour24?: boolean
   events: TimelineEvent[]
 }

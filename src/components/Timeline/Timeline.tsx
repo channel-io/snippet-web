@@ -11,7 +11,7 @@ import EventColor from '../TimelineEventItem/EventColor'
 import TimelineEventItem from '../TimelineEventItem'
 import { Wrapper, GroupLabel, GroupLabelContent } from './Timeline.styled'
 
-interface TimelineProps extends TimelineType {}
+interface TimelineProps extends Partial<TimelineType> {}
 
 type EventItem = {
   key: string
@@ -25,7 +25,10 @@ type GroupedEventItems = {
   [label: string]: EventItem[]
 }
 
-function Timeline({ events, hour24 }: TimelineProps): ReactElement | null {
+function Timeline({
+  events,
+  hour24 = false,
+}: TimelineProps): ReactElement | null {
   const eventItems: GroupedEventItems = useMemo(() => {
     if (!Array.isArray(events) || isEmpty(events)) {
       return {}

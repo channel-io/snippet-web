@@ -7,7 +7,7 @@ import EventColor from './EventColor'
 import { Wrapper, Mark, Time, Value } from './TimelineEventItem.styled'
 
 export interface TimelineEventItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  date: Date
+  date?: Date
   color?: EventColor | string
   hour24?: boolean
 }

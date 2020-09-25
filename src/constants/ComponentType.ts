@@ -13,6 +13,7 @@ enum ComponentType {
 
   // From v0.2
   Timeline = 'timeline',
+  TimelineEventItem = 'timeline-event-item',
 }
 
 export default ComponentType
