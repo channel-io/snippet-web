@@ -2,6 +2,7 @@
 import React, { ReactElement, useMemo, useCallback } from 'react'
 
 /* Internal dependencies */
+import TimelineType from '../../types/Timeline'
 import isEmpty from '../../utils/isEmpty'
 import isNil from '../../utils/isNil'
 import isNumber from '../../utils/isNumber'
@@ -10,10 +11,7 @@ import EventColor from '../TimelineEventItem/EventColor'
 import TimelineEventItem from '../TimelineEventItem'
 import { Wrapper, GroupLabel, GroupLabelContent } from './Timeline.styled'
 
-interface TimelineProps {
-  events?: { ts: number, value: string, color?: string }[]
-  hour24?: boolean
-}
+interface TimelineProps extends TimelineType {}
 
 type EventItem = {
   date: Date
@@ -69,29 +67,36 @@ function Timeline({ events, hour24 }: TimelineProps): ReactElement | null {
     return label
   }, [])
 
+  const TimelineContentComponent = useMemo(() => (
+    Object.keys(eventItems).map((label) => (
+      <div>
+        <GroupLabel>
+          <GroupLabelContent data-groupid={label}>
+            { makeLabel(label) }
+          </GroupLabelContent>
+        </GroupLabel>
+
+        <div>
+          { eventItems[label].map(({ value, ...others }) => (
+            <TimelineEventItem {...others}>
+              { value }
+            </TimelineEventItem>
+          )) }
+        </div>
+      </div>
+    ))
+  ), [
+    makeLabel,
+    eventItems,
+  ])
+
   if (isEmpty(eventItems)) {
     return null
   }
 
   return (
     <Wrapper>
-      { Object.keys(eventItems).map((label) => (
-        <div>
-          <GroupLabel>
-            <GroupLabelContent data-groupid={label}>
-              { makeLabel(label) }
-            </GroupLabelContent>
-          </GroupLabel>
-
-          <div>
-            { eventItems[label].map(({ value, ...others }) => (
-              <TimelineEventItem {...others}>
-                { value }
-              </TimelineEventItem>
-            )) }
-          </div>
-        </div>
-      )) }
+      { TimelineContentComponent }
     </Wrapper>
   )
 }
