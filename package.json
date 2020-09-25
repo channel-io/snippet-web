@@ -19,7 +19,7 @@
     "lint:all": "npm run lint:typescript && npm run lint:styled",
     "lint:staged": "lint-staged"
   },
-  "author": "Channel Corporation",
+  "author": "Channel Corp.",
   "license": "MIT",
   "repository": {
     "type": "git",
