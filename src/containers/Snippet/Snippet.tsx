@@ -12,6 +12,8 @@ import List from '../../components/List'
 import ListItem from '../../components/ListItem'
 import Spacer from '../../components/Spacer'
 import Text from '../../components/Text'
+import Timeline from '../../components/Timeline'
+import TimelineEventItem from '../../components/TimelineEventItem'
 import ComponentType from '../../constants/ComponentType'
 import isObject from '../../utils/isObject'
 import isString from '../../utils/isString'
@@ -47,12 +49,16 @@ function getComponent(type?: string) {
       return Input
     case ComponentType.Text:
       return Text
+    case ComponentType.Timeline:
+      return Timeline
+    case ComponentType.TimelineEventItem:
+      return TimelineEventItem
     default:
       return null
   }
 }
 
-function renderItems(item: any) {
+function renderItem(item: any) {
   if (!isObject(item)) {
     return null
   }
@@ -82,7 +88,7 @@ function Snippet({ items }: SnippetProps): ReactElement | null {
 
   return (
     <>
-      { items.map(renderItems) }
+      { items.map(renderItem) }
     </>
   )
 }

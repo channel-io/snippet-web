@@ -19,14 +19,14 @@
     "lint:all": "npm run lint:typescript && npm run lint:styled",
     "lint:staged": "lint-staged"
   },
-  "author": "ZOYI",
+  "author": "Channel Corporation",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoyi/channel-snippet-web"
+    "url": "https://github.com/channel-io/snippet-web"
   },
   "bugs": {
-    "url": "https://github.com/zoyi/channel-snippet-web/issues"
+    "url": "https://github.com/channel-io/snippet-web/issues"
   },
   "keywords": [
     "react",
@@ -129,7 +129,8 @@
       "^Constants(.*)$": "<rootDir>/src/constants$1",
       "^Containers(.*)$": "<rootDir>/src/containers$1",
       "^Components(.*)$": "<rootDir>/src/components$1",
-      "^Styles(.*)$": "<rootDir>/src/styles$1"
+      "^Styles(.*)$": "<rootDir>/src/styles$1",
+      "^Types(.*)$": "<rootDir>/src/types$1"
     },
     "transform": {
       ".jsx?$": "babel-jest",
