@@ -10,6 +10,8 @@ enum Colors {
   Cobalt400 = '#00A6FF',
   Orange200 = '#FFC14D',
   Orange400 = '#F08C00',
+  Blue400 = '#4A26FF',
+  Red400 = '#F90D3C',
 }
 
 export default Colors

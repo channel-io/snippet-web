@@ -1,4 +1,5 @@
 enum ComponentType {
+  // v0.1
   Button = 'button',
   Divider = 'divider',
   Dropdown = 'dropdown',
@@ -9,6 +10,10 @@ enum ComponentType {
   ListItem = 'list-item',
   Spacer = 'spacer',
   Text = 'text',
+
+  // From v0.2
+  Timeline = 'timeline',
+  TimelineEventItem = 'timeline-event-item',
 }
 
 export default ComponentType
