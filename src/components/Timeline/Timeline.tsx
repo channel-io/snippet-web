@@ -14,6 +14,7 @@ import { Wrapper, GroupLabel, GroupLabelContent } from './Timeline.styled'
 interface TimelineProps extends TimelineType {}
 
 type EventItem = {
+  key: string
   date: Date
   value: string
   color?: EventColor | string
@@ -37,6 +38,7 @@ function Timeline({ events, hour24 }: TimelineProps): ReactElement | null {
         return 0
       })
       .map((event) => ({
+        key: `${event.ts}`,
         date: new Date(event.ts),
         value: event.value,
         color: event.color,
@@ -69,7 +71,7 @@ function Timeline({ events, hour24 }: TimelineProps): ReactElement | null {
 
   const TimelineContentComponent = useMemo(() => (
     Object.keys(eventItems).map((label) => (
-      <div>
+      <div key={label}>
         <GroupLabel>
           <GroupLabelContent data-groupid={label}>
             { makeLabel(label) }
@@ -77,8 +79,11 @@ function Timeline({ events, hour24 }: TimelineProps): ReactElement | null {
         </GroupLabel>
 
         <div>
-          { eventItems[label].map(({ value, ...others }) => (
-            <TimelineEventItem {...others}>
+          { eventItems[label].map(({ key, value, ...others }) => (
+            <TimelineEventItem
+              key={key}
+              {...others}
+            >
               { value }
             </TimelineEventItem>
           )) }
