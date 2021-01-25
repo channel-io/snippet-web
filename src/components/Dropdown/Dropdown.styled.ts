@@ -59,7 +59,7 @@ export const OptionWrapper = styled.div<OptionWrapperProps>`
   background-color: ${Colors.White};
   padding: 8px 0;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   max-height: 345px;
   overflow-y: auto;
   border-radius: 8px;
