@@ -1,6 +1,6 @@
 {
   "name": "@channel.io/snippet",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "channel.io snippet components",
   "main": "build/cjs.js",
   "module": "build/esm.js",
